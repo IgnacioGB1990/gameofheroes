@@ -1,0 +1,220 @@
+.App{
+  display:flex;
+  flex-wrap:wrap;
+  margin-top:5%;
+}
+
+ /* --- P O P  C A R D--- */
+
+.heroCard{ 
+  border-radius: 5px 20px 5px;
+  left:10%;
+  top:30%; 
+  position: absolute;
+  width:800px;
+  height:460px;
+  background-color: white;
+  border-style: solid;
+}
+
+.heroCardWiggle{ 
+  border-radius: 5px 20px 5px;
+  left:10%;
+  top:30%; 
+  position: absolute;
+  width:800px;
+  height:460px;
+  background-color: white;
+  border-style: solid;
+}
+
+.heroCardWiggle:hover{
+  animation: shake 0.5s;
+  animation-iteration-count: 3s;
+}  
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+} 
+
+
+.cancelBtn{
+  border-radius: 5px 15px 5px;
+  background-color:yellow;
+  border: none;
+  color: red;
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+  width: 100px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  margin-left: 29px;;
+  opacity: 0.8;
+  border-style: solid;
+   }
+
+
+.imgCard{
+  float:left;
+  border-radius:50%;
+  width:129px;
+  height:180px;
+  margin-left:22px;
+  margin-top:23px;
+}
+
+.heroName{
+  margin-top:38px;
+  margin-left:38px;
+  padding-left:134px;
+  font-size:16px;
+}
+
+.heroes-format{
+  border-radius:80%;
+}
+
+.heroes-format:hover{
+  transform: scale(1.4);
+  border-color: #66afe9;
+  box-shadow: 0 0 8px rgba(0,255,0, 0.6);
+}
+
+.list-container{
+  justify-content:space-between;
+}
+
+.visuallyhidden{
+  padding: 0;
+  border: none;
+  background: none;
+  outline:none;
+}
+
+button:focus,
+select:focus {
+  outline: none;
+}
+
+ /* --- C H A R T--- */
+
+.chart{
+  width:400px !important;
+  height:250px !important;
+  margin-left: 276px !important;
+  /* style={{ width: "200" }} */
+}
+
+.chartjs-render-monitor{
+  width:507px !important;
+  height:312px !important;
+}
+
+ /* --- P R I C E--- */
+
+.priceTag{
+margin-left:33px;
+width:244px;
+height:5px;
+ color:gold;
+}
+
+
+
+ /* --- B U T T O N--- */
+
+ .recruitBtn{
+border-radius: 5px 20px 5px;
+background-color: #C1FFBB;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 14px;
+padding: 10px;
+width: 100px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+margin-left: 29px;;
+opacity: 0.8;
+border-style: solid;
+ }
+
+ .recruitBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.recruitBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.recruitBtn:hover span {
+  padding-right: 25px;
+}
+
+.recruitBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+ .dismissBtn{  
+border-radius: 5px 20px 5px;
+background-color: #FF8875;
+border: none;
+color: #FFFFFF;
+text-align: center;
+font-size: 14px;
+padding: 10px;
+width: 100px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+opacity: 0.8;
+border-style: solid;
+
+ }
+
+ .dismissBtn span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.dismissBtn span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.dismissBtn:hover span {
+  padding-right: 25px;
+}
+
+.dismissBtn:hover span:after {
+  opacity: 1;
+  right: 0;
+}

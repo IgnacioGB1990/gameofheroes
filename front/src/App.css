@@ -1,0 +1,213 @@
+
+
+#root{
+  background-color: #17202A;
+  height:100%;
+}
+
+
+.visuallyhidden{
+  padding: 0;
+  border: none;
+  background: none;
+  outline:none;
+}
+
+button:focus,
+select:focus {
+  outline: none;
+}
+
+/* --- INPUT BOXES--- */
+
+h2{
+  font-family: 'Bubblegum Sans', cursive;
+  color: white;
+}
+
+.signuph2{
+  color:lightskyblue;
+}
+
+
+.loginh2{
+  color:lightgoldenrodyellow
+}
+
+.container{
+margin-top:5%;
+background-color: #17202A !important;
+color: white;
+width:50vw;
+height:60vh;
+max-width: 730px !important;
+}
+
+.carousel-indicators{
+color:white !important;
+}
+
+
+.form-group{
+  width:30%;
+  font-family: 'Bubblegum Sans', cursive;
+}
+
+.form-control{
+  background-color: #212F3C !important;
+  color:white !important;
+}
+
+.btn.btn-primary{
+  font-family: 'Bubblegum Sans', cursive ;
+  background-color: #5F6A6A;
+  border-color:#D0D3D4;
+  padding: 10px;
+  width: 100px;
+}
+
+#emailHelp{
+color:#F4F6F7 !important;
+}
+
+/* --- HOME PAGE --- */
+
+.carouselSpace{
+  margin-top:5%;
+}
+
+
+.homeLabel !important{
+  width:80%;
+  height:100%;
+align-items: center;
+
+}
+
+
+
+
+/* --- NAV BAR --- */
+
+
+/* --------------  NO HACE NADA SE LA SUDA ------------- */
+.navBar navbar navbar-expand navbar-dark bg-dark  {
+  overflow: hidden;
+  background-color: blue;
+  position: fixed; /* Set the navbar to fixed position */
+  top: 0; /* Position the navbar at the top of the page */
+  width: 80% ; /* Full width */
+  margin-left:50% !important;
+}
+
+.mr-auto navbar-nav{
+  width:80% !important;
+}
+
+/* --------------  NO HACE NADA SE LA SUDA ------------- */
+
+
+
+
+.navHome{
+font-weight: bold;
+font-family: 'Bubblegum Sans', cursive;
+margin-left:26%;
+color:lightcoral;
+}
+
+.navHome:hover{
+  color: white;
+    text-decoration: inherit;
+}
+
+.navLogin{
+  font-weight: bold;
+  font-family: 'Bubblegum Sans', cursive;
+  margin-left:10%;
+  float:right;
+  color:lightgoldenrodyellow;
+  }
+  
+  .navLogin:hover{
+    color: white;
+      text-decoration: inherit;
+  }
+
+
+  .navSignup{
+    font-weight: bold;
+    font-family: 'Bubblegum Sans', cursive;
+    margin-left:10%;
+    float:right;
+    color:lightskyblue;
+    }
+    
+    .navSignup:hover{
+      color: white;
+        text-decoration: inherit;
+       
+    }
+
+    .navList{
+      font-weight: bold;
+      font-family: 'Bubblegum Sans', cursive;
+      margin-left:10%;
+      color:yellow;
+      }
+      
+      .navList:hover{
+        color: white;
+          text-decoration: inherit;
+      }
+
+
+      .navPrivate{
+        font-weight: bold;
+        font-family: 'Bubblegum Sans', cursive;
+        margin-left:10%;
+        color:lightskyblue;
+        }
+        
+        .navPrivate:hover{
+          color: white;
+            text-decoration: inherit;
+        }
+
+        .navLogout{
+          font-weight: bold;
+          font-family: 'Bubblegum Sans', cursive;
+          margin-left:10%;
+          color:peachpuff;
+          }
+          
+          .navLogout:hover{
+            color: white;
+              text-decoration: inherit;
+          }
+
+          .navPortfolio{
+            font-weight: bold;
+            font-family: 'Bubblegum Sans', cursive;
+            margin-left:10%;
+            color:red;
+            }
+            
+            .navPortfolio:hover{
+              color: white;
+                text-decoration: inherit;
+            }
+
+          .userNav{
+            font-family: 'Bubblegum Sans', cursive;
+            margin-left:100%;
+           
+          }
+
+ 
+
+.userImage{
+  width:40px;
+  height:40px;
+  border-radius: 50%;
+}
