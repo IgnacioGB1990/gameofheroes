@@ -13,8 +13,10 @@
   position: absolute;
   width:800px;
   height:460px;
-  background-color: white;
+  background-color: #34495E ;
   border-style: solid;
+
+ 
 }
 
 .heroCardWiggle{ 
@@ -24,7 +26,7 @@
   position: absolute;
   width:800px;
   height:460px;
-  background-color: white;
+  background-color: #34495E;
   border-style: solid;
 }
 
@@ -114,7 +116,7 @@ select:focus {
   width:400px !important;
   height:250px !important;
   margin-left: 276px !important;
-  /* style={{ width: "200" }} */
+ 
 }
 
 .chartjs-render-monitor{
@@ -137,7 +139,7 @@ height:5px;
 
  .recruitBtn{
 border-radius: 5px 20px 5px;
-background-color: #C1FFBB;
+background-color: green;
 border: none;
 color: #FFFFFF;
 text-align: center;
@@ -179,7 +181,7 @@ border-style: solid;
 
  .dismissBtn{  
 border-radius: 5px 20px 5px;
-background-color: #FF8875;
+background-color: red;
 border: none;
 color: #FFFFFF;
 text-align: center;
@@ -217,4 +219,12 @@ border-style: solid;
 .dismissBtn:hover span:after {
   opacity: 1;
   right: 0;
+}
+
+
+ /* --- SEARCH BOX-- */
+
+.searchBox{
+  color:white;
+  background-color: #212F3C;
 }

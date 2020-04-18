@@ -9,7 +9,7 @@ const schema = new mongoose.Schema(
     currency: { type: Number, default: 1000 }
   },
   {
-    timestamps: true
+    timestamps: true   //when was created and when was it modified
   }
 );
 

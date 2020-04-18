@@ -19,7 +19,7 @@ export const App = withAuthentication(() => (
         <Route path="/auth/signup" component={SignUpPage} />
         {/* <Route path="/list" component={ListHeroesPage} /> */}
         <Route path="/list" component={List} />
-        <Route path="/private" component={PrivatePage} />
+        {/* <Route path="/private" component={PrivatePage} /> */}
         <Route path="/portfolio" component={Basket} />
       </Switch>
     </Layout>

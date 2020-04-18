@@ -22,7 +22,7 @@ export const Header = () => {
           {user && (
             <>
               <Link className="navList" to="/list">Heroes</Link>
-              <Link className="navPrivate" to="/private">Private</Link>
+              {/* <Link className="navPrivate" to="/private">Private</Link> */}
               <Link className="navPortfolio" to="/portfolio">Portfolio</Link>
 
               <Link className="navLogout" to="/" onClick={handleLogout}>Logout</Link>

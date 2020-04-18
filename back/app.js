@@ -34,14 +34,15 @@ const debug = require("debug")(
 const app = express();
 
 // Cross Domain CORS whitelist
-const whitelist = ["http://localhost:1234"]; //Acepte las cookies de localhost:1234. Al estar en 2 dominios distintos.
+const whitelist = ["http://localhost:1234", "http://localhost:3000"]; //Acepte las cookies de localhost:1234. Al estar en 2 dominios distintos.
 const corsOptions = {                        //Por defecto el navegador al refrescar la pg no te lo reconoce
   origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
+    callback(null, true);
+    /*if (whitelist.indexOf(origin) !== -1) {
       callback(null, true);
     } else {
       callback(new Error("Not allowed by CORS"));
-    }
+    }*/
   },
   credentials: true
 };
@@ -67,5 +68,10 @@ const index = require("./routes/index");
 app.use("/", index);
 const auth = require("./routes/auth");
 app.use("/auth", auth);
+
+//Video Heroku
+app.use("/", express.static(path.join(__dirname, "../front/dist")))
+
+
 
 module.exports = app;

@@ -8,17 +8,18 @@ export const LoginPage = withRouter(({ history }) => {
   const setUser = useUserSetter();
   const [me, setMe] = useState();
 
-  const quiensoy = () => {
-    console.log("Acabas de entrar en quien soy")
-    whoami()
-      .then(me => {
-        setMe(me)
-        console.log(me)
-      })
-      .catch(e => {
-        console.log("No user logged in")
-      })
-  }
+
+  // const quiensoy = () => {
+  //   console.log("Acabas de entrar en quien soy")
+  //   whoami()
+  //     .then(me => {
+  //       setMe(me)
+  //       console.log(me)
+  //     })
+  //     .catch(e => {
+  //       console.log("No user logged in")
+  //     })
+  // }
 
 
 
@@ -35,7 +36,7 @@ export const LoginPage = withRouter(({ history }) => {
       // Redirige el router a la HOME
       history.push("/");
       setUser(user);
-      quiensoy()
+      //quiensoy()
     } catch (e) {
       console.log(e);
       setError(e.message);

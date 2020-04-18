@@ -4,8 +4,9 @@ import useFetch from "../../../src/components/Hooks/useFetch"
 import { withProtected } from "../../../lib/protectRoute.hoc"
 import HeroeBox from "./HeroeBox"
 import Input from "./Input"
+import BasketHeroes from "../BasketHeroes"
 import { whoami } from "../../../lib/auth.api";
-//import BasketHeroes from "./BasketHeroes"
+
 
 const ListHeroes = () => {
   const { heroes, loading } = useFetch("https://akabab.github.io/superhero-api/api/all.json");
@@ -13,9 +14,11 @@ const ListHeroes = () => {
   const [filter, setFilter] = useState("");
   const [curncy, setCurncy] = useState();
 
+  console.log(selectedHeroes)
   //Le estamos indicando a React que el comoponente tiene que hacer algo después de renderizarse.
   //React recordará la función que le hemos pasado y la llamará más tarde después de actualizar el DOM.
   //Se ejecuta despues de cada renderizado
+
   useEffect(() => {
     console.log("Acabas de entrar en useEffect")
     whoami()
@@ -93,7 +96,8 @@ const ListHeroes = () => {
   return (
 
     < div className="App" >
-      {/* <BasketHeroes /> */}
+      <BasketHeroes selectedHeroes={selectedHeroes} />
+
       <Input setFilter={setFilter} />
       {renderHeroes()}
     </div >

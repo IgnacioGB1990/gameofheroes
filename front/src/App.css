@@ -38,8 +38,8 @@ h2{
 margin-top:5%;
 background-color: #17202A !important;
 color: white;
-width:50vw;
-height:60vh;
+width:60vw;
+height:70vh;
 max-width: 730px !important;
 }
 
@@ -66,22 +66,27 @@ color:white !important;
   width: 100px;
 }
 
+.btn.btn-primary:hover{
+  background-color: #ECF0F1  !important;
+  color:black;
+}
+
+
 #emailHelp{
 color:#F4F6F7 !important;
 }
 
 /* --- HOME PAGE --- */
 
-.carouselSpace{
-  margin-top:5%;
-}
 
 
-.homeLabel !important{
-  width:80%;
-  height:100%;
-align-items: center;
 
+.homeLabel {
+  display: block !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  width: 30% !important;
+  border-radius:3%;
 }
 
 
@@ -91,13 +96,10 @@ align-items: center;
 
 
 /* --------------  NO HACE NADA SE LA SUDA ------------- */
-.navBar navbar navbar-expand navbar-dark bg-dark  {
+.navBar.navbar.navbar-expand.navbar-dark.bg-dark  {
   overflow: hidden;
-  background-color: blue;
-  position: fixed; /* Set the navbar to fixed position */
-  top: 0; /* Position the navbar at the top of the page */
-  width: 80% ; /* Full width */
-  margin-left:50% !important;
+  border-bottom: white !important;
+
 }
 
 .mr-auto navbar-nav{
@@ -211,3 +213,40 @@ color:lightcoral;
   height:40px;
   border-radius: 50%;
 }
+
+
+
+/* --------------  CAROUSEL ------------- */
+
+.carouselSpace{
+  margin-top:5%;
+}
+
+.carousel-inner{
+  height:500px !important;
+}
+
+.carousel-item{
+  height:500px !important;
+}
+
+
+.carousel-caption{
+  padding-top:20% !important;
+}
+
+h3{
+  color:#FDFEFE  !important;
+  font-weight: bold;
+  font-family: 'Bubblegum Sans';
+}
+
+p{
+  
+  font-family: 'Bubblegum Sans';
+}
+
+.sr-only{
+background-color:red !important;
+}
+

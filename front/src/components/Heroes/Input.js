@@ -15,7 +15,7 @@ const Input = ({ setFilter }) => {
 
   return (
     <InputContainer>
-      <input placeholder="search" onChange={e => setFilter(e.target.value)} />
+      <input className="searchBox" placeholder="search" onChange={e => setFilter(e.target.value)} />
     </InputContainer>
   )
 }
