@@ -13,7 +13,7 @@ const MongoStore = require("connect-mongo")(session);
 
 //Connecting to the Database
 mongoose
-  .connect(process.env.DBURL, {
+  .connect(process.env.DBURL_PRODUCTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true
   })
