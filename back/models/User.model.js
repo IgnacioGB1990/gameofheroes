@@ -6,7 +6,7 @@ const schema = new mongoose.Schema(
     password: String,
     avatar: { type: String, default: 'https://i.pinimg.com/236x/4f/95/66/4f956662848e750b4689c79ea25e1521.jpg' },
     cart: [],
-    currency: { type: Number, default: 1000 }
+    currency: { type: Number, default: 200 }
   },
   {
     timestamps: true   //when was created and when was it modified

@@ -1,23 +1,25 @@
 import React, { useState } from "react";
 import Chart from "./Chart"
+import { getAveragePrice } from "../utils/"
 
 //...otherStats te devuelve el resto del la info del heroe
-export const HeroeBox = ({ heroe: { name, images, appearance, powerstats },
-  selectedHeroes, setSelectedHeroes, curncy, setCurncy }) => {
+export const HeroeBox = ({ heroe: { id, name, images, appearance, powerstats },
+  selectedHeroes, setSelectedHeroes, curncy, setCurncy, game, setGame,
+  avgInt, avgStr, avgSpe, avgDur, avgPow, avgCom }) => {
 
-  //console.log('selectedHeroes:', selectedHeroes)
   const [noDisplay, yesDisplay] = useState(false)
   const [noShake, yesShake] = useState(false)
 
-  const addHeroesToCart = (power) => {
-    console.log("ACABAS DE RECLUTAR A", power)
+  const addHeroesToCart = (heroe) => {
+    console.log("ACABAS DE RECLUTAR A", heroe[3].intelligence)
+    console.log(getAveragePrice(heroe[3]))
 
-    if (curncy > power.intelligence) {
-      setSelectedHeroes([...selectedHeroes, power])
+    if (curncy > getAveragePrice(heroe[3])) {
+      setSelectedHeroes([...selectedHeroes, heroe])
       yesDisplay(!noDisplay)
-      curncy -= power.intelligence * 3;
+      curncy -= getAveragePrice(heroe[3]);
       setCurncy(curncy)
-    } else if (curncy < power.intelligence) {
+    } else if (curncy < getAveragePrice(heroe[3])) {
       yesShake(!noShake)
     }
     console.log("Salio")
@@ -52,9 +54,12 @@ export const HeroeBox = ({ heroe: { name, images, appearance, powerstats },
         Height: {appearance.height[1]} <br />
         Weight: {appearance.weight[1]}
       </p >
-      <Chart int={powerstats.intelligence} str={powerstats.strength} spe={powerstats.speed} dur={powerstats.durability} pow={powerstats.power} com={powerstats.combat} />
-      <p className="priceTag">Price: {Math.round((powerstats.intelligence + powerstats.strength + powerstats.speed + powerstats.durability + powerstats.power + powerstats.combat) / 6)}💰 Available: {curncy} </p>
-      <button style={{ outline: "none" }} className={stop()} onClick={() => addHeroesToCart(powerstats)}><span>{stopMe()}</span></button>
+      <Chart int={powerstats.intelligence} str={powerstats.strength} spe={powerstats.speed}
+        dur={powerstats.durability} pow={powerstats.power} com={powerstats.combat}
+        avgInt={avgInt} avgStr={avgStr} avgSpe={avgSpe} avgDur={avgDur} avgPow={avgPow} avgCom={avgCom} />
+
+      <p className="priceTag">Price: {getAveragePrice(powerstats)}💰 Available: {curncy} </p>
+      <button style={{ outline: "none" }} className={stop()} onClick={() => addHeroesToCart([id, name, images, powerstats])}><span>{stopMe()}</span></button>
       <button style={{ outline: "none" }} className="dismissBtn" onClick={() => yesDisplay(!noDisplay)}><span>Dismiss</span></button>
     </div>
     )

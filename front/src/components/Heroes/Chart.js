@@ -40,7 +40,7 @@ class Chart extends Component {
           {
             label: 'Average',
             fill: false,
-            data: [64.44, 42.04, 40.41, 59.08, 64.45, 61.53],
+            data: [props.avgInt, props.avgStr, props.avgSpe, props.avgDur, props.avgPow, props.avgCom],
 
 
 

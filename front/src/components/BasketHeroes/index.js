@@ -1,19 +1,27 @@
 import React from 'react';
 import './styles.css';
 
-export const BasketHeroes = ({ selectedHeroes }) => {
+export const BasketHeroes = ({ selectedHeroes, game, setGame }) => {
   console.log('selectedHeroes:', selectedHeroes)
 
 
+  const gameOn = () => {
+    if (selectedHeroes.length = 3) {
+      console.log("Puedes jugar")
+      console.log('selectedHeroes.length:', selectedHeroes.length)
+      setGame(!game)
+    }
+    console.log("No puedes jugar")
 
+  }
 
 
 
 
 
   return (
-    < button className="startGame" >
-      Game 2: {selectedHeroes.length}
+    < button onClick={() => gameOn(selectedHeroes)} className="startGame" >
+      Game: {selectedHeroes.length}
     </button >
   );
 };
