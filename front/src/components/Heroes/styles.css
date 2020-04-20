@@ -1,7 +1,11 @@
 .App{
   display:flex;
   flex-wrap:wrap;
-  margin-top:5%;
+  margin-top:3%;
+  position:absolute;
+  top:0;
+  left:5%;
+  width:90vw;
 }
 
  /* --- P O P  C A R D--- */
@@ -227,4 +231,11 @@ border-style: solid;
 .searchBox{
   color:white;
   background-color: #212F3C;
+  width:15% !important;
+  float:left;
+  border-radius:5%;
 }
+
+/* .sc-AxjAm.eytsdW{
+width:50%;
+} */

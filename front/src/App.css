@@ -5,6 +5,14 @@
   height:100%;
 }
 
+.back{
+ 
+  position:absolute;
+  top:15;
+  left:1%;
+  width:50px;
+  height:50px;
+}
 
 .visuallyhidden{
   padding: 0;
@@ -35,11 +43,14 @@ h2{
 }
 
 .container{
-margin-top:5%;
+top:0px !important;
+left:0px !important;
+margin-top:3%;
+margin-left:1%;
 background-color: #17202A !important;
 color: white;
 width:60vw;
-height:70vh;
+height:100vh;
 max-width: 730px !important;
 }
 

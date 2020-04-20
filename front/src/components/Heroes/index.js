@@ -5,6 +5,7 @@ import { withProtected } from "../../../lib/protectRoute.hoc"
 import HeroeBox from "./HeroeBox"
 import Input from "./Input"
 import BasketHeroes from "../BasketHeroes"
+import Game from "../Game"
 import { whoami } from "../../../lib/auth.api";
 import { allHeroesUtils, averagePowerstat } from "../utils"
 
@@ -15,9 +16,10 @@ const ListHeroes = () => {
   const [curncy, setCurncy] = useState();
   const [game, setGame] = useState(false)
 
+  console.log("these are the selectedHeroes", selectedHeroes)
 
   useEffect(() => {
-    console.log("Acabas de entrar en useEffect")
+    // console.log("Acabas de entrar en useEffect")
     whoami()
       .then(user => {
         setCurncy(user.currency)
@@ -58,11 +60,18 @@ const ListHeroes = () => {
       )
     );
 
+
+  const muestrame = () =>
+    selectedHeroes.map((recruited, key) =>
+      <Game recruited={recruited} key={key} />
+    );
+
   if (game) {
     return <div>
-      Gaming Mode!!!!
-      <button onClick={() => setGame(!game)}></button>
-      )
+      <button className="back" onClick={() => setGame(!game)}>ATRAS</button>
+      {muestrame()}
+
+
     </div>
   }
 
@@ -70,7 +79,6 @@ const ListHeroes = () => {
 
     < div className="App" >
       <BasketHeroes selectedHeroes={selectedHeroes} game={game} setGame={setGame} />
-
       <Input setFilter={setFilter} />
       {renderHeroes()}
     </div >

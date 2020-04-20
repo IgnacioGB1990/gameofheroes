@@ -1,23 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css';
 
 export const BasketHeroes = ({ selectedHeroes, game, setGame }) => {
-  console.log('selectedHeroes:', selectedHeroes)
-
+  const [display, setDisplay] = useState(false)
+  //console.log('display:', display)
+  //console.log('selectedHeroes length:', selectedHeroes.length)
 
   const gameOn = () => {
-    if (selectedHeroes.length = 3) {
-      console.log("Puedes jugar")
-      console.log('selectedHeroes.length:', selectedHeroes.length)
+    if (selectedHeroes.length <= 10) {
+
+      setDisplay(!display)
       setGame(!game)
     }
     console.log("No puedes jugar")
-
   }
 
-
-
-
+  if (display) {
+    return <div>
+      entras???
+    </div>
+  }
 
   return (
     < button onClick={() => gameOn(selectedHeroes)} className="startGame" >
@@ -25,8 +27,6 @@ export const BasketHeroes = ({ selectedHeroes, game, setGame }) => {
     </button >
   );
 };
-
-
 
 // Redirect to /auth/login if user is not present
 export default BasketHeroes;
