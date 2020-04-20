@@ -13,7 +13,7 @@ export const LoginSignupForm = ({ handleSubmit }) => {
       }}
     >
       <div className="form-group">
-        <label htmlFor="exampleInputEmail1">Email address {username}</label>
+        <label htmlFor="exampleInputEmail1">User </label>
         <input
           type="text"
           className="form-control"
@@ -27,7 +27,7 @@ export const LoginSignupForm = ({ handleSubmit }) => {
         </small>
       </div>
       <div className="form-group">
-        <label htmlFor="exampleInputPassword1">Password {password}</label>
+        <label htmlFor="exampleInputPassword1">Password</label>
         <input
           type="password"
           className="form-control"

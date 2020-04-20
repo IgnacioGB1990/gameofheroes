@@ -1,38 +1,35 @@
 .Game{
-  
   position:absolute;
   top:3%;
   left:5%;
   width:90vw;
   height:100vh;
-  
 }
 
 .userBox{
   margin-top:8%;
-  width:45%;
+  width:47%;
   height:80vh;
   float:left;
   border-radius: 5px 20px 5px; 
   background-color: #34495E ;
   border-style: solid;
+  display: flex !important;
   
   
 }
 
 .imagesRecrutied{
-  display:flex !important;
-  flex-direction:row !important;
-  width:200px;
-  height:200px;
- 
+  flex-wrap: wrap !important;
+  padding:10px;
+  width:500px;
+  height:200px !important;
 }
 
 .machineBox{
   margin-top:8%;
-  width:45%;
-  height:80vh;
- 
+  width:47%;
+  height:80vh; 
   float:right;
   border-radius: 5px 20px 5px; 
   background-color: #D35400 ;
