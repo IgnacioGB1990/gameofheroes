@@ -1,29 +1,61 @@
+ /* --- BOX USER --- */
+.boxUser{
+
+  /*
+  background-color: red;
+ 
+ 
+  border-radius: 5px 20px 5px; 
+  background-color: #34495E ;
+  border-style: solid;
+*/
+width:43%;
+height:85%;
+position:absolute;
+top:5%;
+left:5%;
+display:flex;
+flex-direction:column;
+}
+
 .Game{
   position:absolute;
   top:3%;
   left:5%;
   width:90vw;
   height:100vh;
+ 
 }
+
 
 .userBox{
-  margin-top:8%;
-  width:47%;
-  height:80vh;
-  float:left;
-  border-radius: 5px 20px 5px; 
+  width:33%;
+  height:33%;  
+  margin:1%;
+  /* border-radius: 5px 20px 5px; 
   background-color: #34495E ;
-  border-style: solid;
-  display: flex !important;
-  
-  
+  border-style: solid; */
+  margin-top:1%;
+
 }
 
-.imagesRecrutied{
-  flex-wrap: wrap !important;
-  padding:10px;
-  width:500px;
-  height:200px !important;
+.imgRecruited{
+ width:82px;
+ height:95px;
+ padding:5px;
+ margin:10px;
+ border-radius:53%; 
+ float:left;
+}
+
+
+.cabroni{
+  width:20%;
+  height:20%;
+  top:16px;
+  margin-left:1%;
+  margin-top:5%;
+  padding-bottom:5%;
 }
 
 .machineBox{
@@ -35,4 +67,17 @@
   background-color: #D35400 ;
   border-style: solid;
 }
+
+/* :not(.chartjs-render-monitor) */
+
+/*
+ .chartjs-render-monitor { 
+padding:20%;
+margin-bottom:50%;
+
+}  
+*/
+
+
+
 

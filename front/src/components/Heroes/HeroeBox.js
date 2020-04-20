@@ -10,17 +10,20 @@ export const HeroeBox = ({ heroe: { id, name, images, appearance, powerstats },
   const [noDisplay, yesDisplay] = useState(false)
   const [noShake, yesShake] = useState(false)
 
-  const addHeroesToCart = (heroe) => {
-    console.log("ACABAS DE RECLUTAR A", heroe[3].intelligence)
-    console.log(getAveragePrice(heroe[3]))
 
-    if (curncy > getAveragePrice(heroe[3])) {
+
+  const addHeroesToCart = (heroe) => {
+    console.log("ACABAS DE RECLUTAR A", heroe)
+    console.log(getAveragePrice(heroe[3]))
+    console.log(heroe[4].selectedHeroes.length)
+    if (curncy > getAveragePrice(heroe[3]) && heroe[4].selectedHeroes.length <= 2) {
       setSelectedHeroes([...selectedHeroes, heroe])
       yesDisplay(!noDisplay)
       curncy -= getAveragePrice(heroe[3]);
       setCurncy(curncy)
-    } else if (curncy < getAveragePrice(heroe[3])) {
+    } else if (curncy < getAveragePrice(heroe[3]) || heroe[4].selectedHeroes.length > 2) {
       yesShake(!noShake)
+      console.log("no va")
     }
     console.log("Salio")
   }
@@ -43,7 +46,7 @@ export const HeroeBox = ({ heroe: { id, name, images, appearance, powerstats },
     if (!noShake) {
       return "Recruit"
     }
-    return "No money!"
+    return "Only 3!"
   }
 
   if (noDisplay) {
@@ -59,7 +62,7 @@ export const HeroeBox = ({ heroe: { id, name, images, appearance, powerstats },
         avgInt={avgInt} avgStr={avgStr} avgSpe={avgSpe} avgDur={avgDur} avgPow={avgPow} avgCom={avgCom} />
 
       <p className="priceTag">Price: {getAveragePrice(powerstats)}💰 Available: {curncy} </p>
-      <button style={{ outline: "none" }} className={stop()} onClick={() => addHeroesToCart([id, name, images, powerstats])}><span>{stopMe()}</span></button>
+      <button style={{ outline: "none" }} className={stop()} onClick={() => addHeroesToCart([id, name, images, powerstats, { selectedHeroes }])}><span>{stopMe()}</span></button>
       <button style={{ outline: "none" }} className="dismissBtn" onClick={() => yesDisplay(!noDisplay)}><span>Dismiss</span></button>
     </div>
     )

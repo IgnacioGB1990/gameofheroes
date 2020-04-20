@@ -6,12 +6,16 @@
 }
 
 .back{
- 
   position:absolute;
   top:15;
   left:1%;
-  width:50px;
-  height:50px;
+  width:65px;
+  height:25px;
+  border-radius: 5%;
+}
+
+.back:hover{
+  background-color: #CACFD2;
 }
 
 .visuallyhidden{
@@ -214,6 +218,7 @@ color:lightcoral;
           .userNav{
             font-family: 'Bubblegum Sans', cursive;
             margin-left:100%;
+            color:white;
            
           }
 

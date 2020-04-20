@@ -67,12 +67,15 @@ const ListHeroes = () => {
     );
 
   if (game) {
-    return <div>
+    return <>
       <button className="back" onClick={() => setGame(!game)}>ATRAS</button>
-      {muestrame()}
+      <div className="boxUser">
+
+        {muestrame()}
 
 
-    </div>
+      </div>
+    </>
   }
 
   return (

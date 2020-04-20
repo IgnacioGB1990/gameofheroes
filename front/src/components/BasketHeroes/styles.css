@@ -1,5 +1,12 @@
 .startGame{
-  background-color: red;
+  background-color: #D6DBDF ;
   float:right;
+  border-radius:5%;
+}
+
+.startGame:hover{
+  background-color: green;
+  float:right;
+  
 }
 
