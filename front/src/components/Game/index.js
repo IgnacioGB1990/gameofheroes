@@ -13,7 +13,7 @@ export const Game = ({ recruited }) => {
         <Chart className="chartSelected" int={recruited[3].intelligence} str={recruited[3].strength} spe={recruited[3].speed}
           dur={recruited[3].durability} pow={recruited[3].power} com={recruited[3].combat}
         />
-        <div>space</div>
+        <div className="spaceBar">space</div>
       </div>
     </div >
   );

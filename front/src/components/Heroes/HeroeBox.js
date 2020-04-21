@@ -10,8 +10,6 @@ export const HeroeBox = ({ heroe: { id, name, images, appearance, powerstats },
   const [noDisplay, yesDisplay] = useState(false)
   const [noShake, yesShake] = useState(false)
 
-
-
   const addHeroesToCart = (heroe) => {
     console.log("ACABAS DE RECLUTAR A", heroe)
     console.log(getAveragePrice(heroe[3]))
