@@ -5,18 +5,88 @@
   height:100%;
 }
 
-.back{
+/* .back{
   position:absolute;
   top:15;
   left:1%;
   width:65px;
-  height:25px;
-  border-radius: 5%;
+  height:34px;
+  border-radius: 6%;
 }
 
 .back:hover{
   background-color: #CACFD2;
-}
+} */
+
+.back{
+  border-radius: 5px 20px 5px;
+  background-color: #34495E;
+  border: none;
+  color: white;
+  text-align: center;
+  position:absolute;
+  top:6%;
+  left:8%;
+  border-radius:5%;
+  height:30px;
+  padding: 3px;
+  height:4.2%;
+  width:5.2%;
+  border-radius:3%;
+  transition: all 0.5s;
+  cursor: pointer;
+  opacity: 0.8;
+  font-size: 14px;
+  font-family: 'Bubblegum Sans', cursive;
+   }
+
+   .back:hover{
+    background-color: #F4F6F7;
+    color:black;
+   }
+  
+   .back span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+  }
+  
+  .back span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+  }
+  
+  .back:hover span {
+    padding-right: 25px;
+   
+  }
+  
+  .back:hover span:after {
+    opacity: 1;
+    right: 0;
+    
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 .visuallyhidden{
   padding: 0;
@@ -31,6 +101,8 @@ select:focus {
 }
 
 /* --- INPUT BOXES--- */
+
+
 
 h2{
   font-family: 'Bubblegum Sans', cursive;
@@ -56,6 +128,8 @@ color: white;
 width:60vw;
 height:100vh;
 max-width: 730px !important;
+padding-left: 10% !important;
+padding-top:5%;
 }
 
 .carousel-indicators{
@@ -129,7 +203,7 @@ color:#F4F6F7 !important;
 .navHome{
 font-weight: bold;
 font-family: 'Bubblegum Sans', cursive;
-margin-left:26%;
+margin-left:33%;
 color:lightcoral;
 }
 
@@ -217,8 +291,9 @@ color:lightcoral;
 
           .userNav{
             font-family: 'Bubblegum Sans', cursive;
-            margin-left:100%;
+            margin-left:562%;
             color:white;
+            
            
           }
 

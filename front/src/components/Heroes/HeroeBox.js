@@ -40,10 +40,16 @@ export const HeroeBox = ({ heroe: { id, name, images, appearance, powerstats },
     return "cancelBtn"
   }
 
-  const stopMe = () => {
+  const stopMe = (heroe) => {
+    console.log(heroe)
+    console.log(curncy)
+    console.log(getAveragePrice(heroe[3]))
     if (!noShake) {
       return "Recruit"
+    } else if (curncy < getAveragePrice(heroe[3])) {
+      return "No money!"
     }
+    console.log(curncy)
     return "Only 3!"
   }
 
@@ -60,7 +66,7 @@ export const HeroeBox = ({ heroe: { id, name, images, appearance, powerstats },
         avgInt={avgInt} avgStr={avgStr} avgSpe={avgSpe} avgDur={avgDur} avgPow={avgPow} avgCom={avgCom} />
 
       <p className="priceTag">Price: {getAveragePrice(powerstats)}💰 Available: {curncy} </p>
-      <button style={{ outline: "none" }} className={stop()} onClick={() => addHeroesToCart([id, name, images, powerstats, { selectedHeroes }])}><span>{stopMe()}</span></button>
+      <button style={{ outline: "none" }} className={stop()} onClick={() => addHeroesToCart([id, name, images, powerstats, { selectedHeroes }])}><span>{stopMe([id, name, images, powerstats, { selectedHeroes }])}</span></button>
       <button style={{ outline: "none" }} className="dismissBtn" onClick={() => yesDisplay(!noDisplay)}><span>Dismiss</span></button>
     </div>
     )

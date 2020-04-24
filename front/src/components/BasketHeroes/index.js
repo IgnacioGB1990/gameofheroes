@@ -22,8 +22,10 @@ export const BasketHeroes = ({ selectedHeroes, game, setGame }) => {
   }
 
   return (
-    < button onClick={() => gameOn(selectedHeroes)} className="startGame" >
-      Game: {selectedHeroes.length}
+    < button onClick={() => gameOn(selectedHeroes)} className="startGame" ><span>
+      Game
+    </span>
+
     </button >
   );
 };

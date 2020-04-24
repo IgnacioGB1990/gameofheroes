@@ -1,21 +1,14 @@
+ 
  /* --- BOX USER --- */
 .boxUser{
-
-  /*
-  background-color: red;
- 
- 
-  border-radius: 5px 20px 5px; 
-  background-color: #34495E ;
-  border-style: solid;
-*/
 width:43%;
 height:85%;
 position:absolute;
-top:5%;
-left:5%;
+top:15%;
+left:1%;
 display:flex;
 flex-direction:column;
+
 }
 
 .Game{
@@ -24,19 +17,15 @@ flex-direction:column;
   left:5%;
   width:90vw;
   height:100vh;
- 
+  
 }
 
-
 .userBox{
-  width:33%;
+  top:1%;
+  width:22%;
   height:33%;  
-  margin:1%;
-  /* border-radius: 5px 20px 5px; 
-  background-color: #34495E ;
-  border-style: solid; */
   margin-top:1%;
-
+  padding-left:5%;
 }
 
 .imgRecruited{
@@ -59,19 +48,36 @@ flex-direction:column;
 }
 
 .machineBox{
-  margin-top:8%;
-  width:47%;
-  height:80vh; 
-  float:right;
-  border-radius: 5px 20px 5px; 
-  background-color: #D35400 ;
-  border-style: solid;
+position:absolute;
+top:5%;
+left:50%;
+width: 50%;
+height:100%;
+border-radius: 5px 20px 5px; 
+background-color: #D35400 ;
+border-style: solid;
 }
 
 
 .spaceBar{
   width:50%;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* :not(.chartjs-render-monitor) */
 

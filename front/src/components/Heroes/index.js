@@ -6,8 +6,10 @@ import HeroeBox from "./HeroeBox"
 import Input from "./Input"
 import BasketHeroes from "../BasketHeroes"
 import Game from "../Game"
+import Machine from "../Machine"
 import { whoami } from "../../../lib/auth.api";
 import { allHeroesUtils, averagePowerstat } from "../utils"
+
 
 const ListHeroes = () => {
   const { heroes, loading } = useFetch("https://akabab.github.io/superhero-api/api/all.json");
@@ -15,8 +17,12 @@ const ListHeroes = () => {
   const [filter, setFilter] = useState("");
   const [curncy, setCurncy] = useState();
   const [game, setGame] = useState(false)
+  const [machine, setMachine] = useState(false)
+  // const [fight, setFight] = useState(false)
+  console.log(curncy)
 
-  console.log("these are the selectedHeroes", selectedHeroes)
+  //console.log("These are the selected Heroes", selectedHeroes)
+  //console.log("this is machine", machine)
 
   useEffect(() => {
     // console.log("Acabas de entrar en useEffect")
@@ -44,13 +50,13 @@ const ListHeroes = () => {
   const arrPow = allHeroes.map(heroe => heroe.powerstats.power)
   const arrCom = allHeroes.map(heroe => heroe.powerstats.combat)
   //Get powerstats average
-  const avgInt = averagePowerstat(arrInt)
-  const avgStr = averagePowerstat(arrStr)
-  const avgSpe = averagePowerstat(arrSpe)
-  const avgDur = averagePowerstat(arrDur)
-  const avgPow = averagePowerstat(arrPow)
-  const avgCom = averagePowerstat(arrCom)
-
+  const avgInt = averagePowerstat(arrInt).toFixed(2)
+  const avgStr = averagePowerstat(arrStr).toFixed(2)
+  const avgSpe = averagePowerstat(arrSpe).toFixed(2)
+  const avgDur = averagePowerstat(arrDur).toFixed(2)
+  const avgPow = averagePowerstat(arrPow).toFixed(2)
+  const avgCom = averagePowerstat(arrCom).toFixed(2)
+  //Renders and filters all heroes list
   const renderHeroes = () =>
     allHeroes.map((heroe, key) =>
       heroe.name.toLowerCase().includes(filter.toLowerCase()) && (
@@ -60,30 +66,60 @@ const ListHeroes = () => {
       )
     );
 
-
-  const muestrame = () =>
+  const recruited = () =>
     selectedHeroes.map((recruited, key) =>
-      <Game recruited={recruited} key={key} />
+      <Game className="gamePosition" recruited={recruited} key={key} />
     );
 
+
+  const getRandom = (heroes) =>
+    heroes.map((heroe, key) =>
+      <Machine heroe={heroe} key={key} />
+    );
+
+
+  const random = (heroes) => {
+    if (machine) {
+      return (
+        <>
+          {getRandom(heroes.sort(() => Math.random() - Math.random()).slice(0, 3))}
+        </>
+      );
+    } else if (machine === false) {
+      return "machine"
+    }
+
+  }
+
+
+  //If game is clicked it displays heroes selected and menu for battling
   if (game) {
     return <>
-      <button className="back" onClick={() => setGame(!game)}>ATRAS</button>
+      <button className="back" onClick={() => setGame(!game)}><span>BACK</span></button>
+      <button className="remove" onClick={() => setSelectedHeroes([])} >X</button>
       <div className="boxUser">
+        {recruited()}
+      </div>
 
-        {muestrame()}
-
-
+      <button className="fightBtn" onClick={() => { setMachine(!machine) }} > Fight </button>
+      <div className={random(heroes)}>
+        {/* {getRandom(heroes.sort(() => Math.random() - Math.random()).slice(0, 3))} */}
+        {random(allHeroes)}
       </div>
     </>
   }
 
-  return (
 
+
+  return (
     < div className="App" >
       <BasketHeroes selectedHeroes={selectedHeroes} game={game} setGame={setGame} />
       <Input setFilter={setFilter} />
       {renderHeroes()}
+      <p className="heroeBtn">Heroes: {allHeroes.length}</p>
+      <p className="recruitedBtn">Recruited: {selectedHeroes.length}</p>
+
+      <p className="curncyBtn">{curncy} 💰</p>
     </div >
   );
 };
