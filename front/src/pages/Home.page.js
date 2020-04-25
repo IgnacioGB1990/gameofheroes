@@ -22,7 +22,7 @@ export const HomePage = () => {
         />
         <Carousel.Caption>
           <h3>Game of Heroes</h3>
-          <p>Recruit amongst 560 heroes from your childhood.</p>
+          <p>Recruit amongst 556 heroes from your childhood.</p>
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -33,7 +33,7 @@ export const HomePage = () => {
         />
 
         <Carousel.Caption>
-          <h3>Battle with you friends</h3>
+          <h3>Battle till your last breath</h3>
           <p>Every heroe has its strengths and weaknesses</p>
         </Carousel.Caption>
       </Carousel.Item>
@@ -46,7 +46,7 @@ export const HomePage = () => {
 
         <Carousel.Caption>
           <h3>Only one can survive</h3>
-          <p>Choose wisely what your next move will be as it may be your last one </p>
+          <p>Choose wisely what your next move will be as it may be your last</p>
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>

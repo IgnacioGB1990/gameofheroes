@@ -30,8 +30,8 @@
   border-radius:5%;
   height:30px;
   padding: 3px;
-  height:4.2%;
-  width:5.2%;
+  height:3.2%;
+  width:4.2%;
   border-radius:3%;
   transition: all 0.5s;
   cursor: pointer;
@@ -71,19 +71,6 @@
     right: 0;
     
   }
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -203,7 +190,7 @@ color:#F4F6F7 !important;
 .navHome{
 font-weight: bold;
 font-family: 'Bubblegum Sans', cursive;
-margin-left:33%;
+margin-left:39%;
 color:lightcoral;
 }
 

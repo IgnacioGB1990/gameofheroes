@@ -10,7 +10,6 @@ import Machine from "../Machine"
 import { whoami } from "../../../lib/auth.api";
 import { allHeroesUtils, averagePowerstat } from "../utils"
 
-
 const ListHeroes = () => {
   const { heroes, loading } = useFetch("https://akabab.github.io/superhero-api/api/all.json");
   const [selectedHeroes, setSelectedHeroes] = useState([])
@@ -18,11 +17,6 @@ const ListHeroes = () => {
   const [curncy, setCurncy] = useState();
   const [game, setGame] = useState(false)
   const [machine, setMachine] = useState(false)
-  // const [fight, setFight] = useState(false)
-  console.log(curncy)
-
-  //console.log("These are the selected Heroes", selectedHeroes)
-  //console.log("this is machine", machine)
 
   useEffect(() => {
     // console.log("Acabas de entrar en useEffect")
@@ -81,8 +75,10 @@ const ListHeroes = () => {
   const random = (heroes) => {
     if (machine) {
       return (
-        <>
-          {getRandom(heroes.sort(() => Math.random() - Math.random()).slice(0, 3))}
+        < >
+          <div className="randomContainer">
+            {getRandom(heroes.sort(() => Math.random() - Math.random()).slice(0, 3))}
+          </div>
         </>
       );
     } else if (machine === false) {
@@ -102,6 +98,7 @@ const ListHeroes = () => {
       </div>
 
       <button className="fightBtn" onClick={() => { setMachine(!machine) }} > Fight </button>
+
       <div className={random(heroes)}>
         {/* {getRandom(heroes.sort(() => Math.random() - Math.random()).slice(0, 3))} */}
         {random(allHeroes)}
@@ -109,14 +106,12 @@ const ListHeroes = () => {
     </>
   }
 
-
-
   return (
     < div className="App" >
       <BasketHeroes selectedHeroes={selectedHeroes} game={game} setGame={setGame} />
       <Input setFilter={setFilter} />
       {renderHeroes()}
-      <p className="heroeBtn">Heroes: {allHeroes.length}</p>
+      <p className="heroeBtn">Total Heroes: {allHeroes.length}</p>
       <p className="recruitedBtn">Recruited: {selectedHeroes.length}</p>
 
       <p className="curncyBtn">{curncy} 💰</p>
