@@ -7,4 +7,5 @@ Choose amongst 556 different hereos from you childhood!
 # Recruit your army with the power abilities in mind.
 
 Be aware of your money as each hero depending on his abilities are more worthy than others.
+
 <img width="745" alt="Captura de pantalla 2020-04-25 a las 12 50 29" src="https://user-images.githubusercontent.com/55360078/80278045-854fdd00-86f3-11ea-8f37-92561c17f15f.png">
