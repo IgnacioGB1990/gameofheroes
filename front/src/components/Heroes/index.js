@@ -125,5 +125,5 @@ const Page = () => (
   </div>
 );
 
-// Redirect to /auth/login if user is not present
+
 export const List = withProtected(Page);

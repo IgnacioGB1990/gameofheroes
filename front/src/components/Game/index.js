@@ -21,8 +21,6 @@ export const Game = ({ recruited }) => {
         <Chart className="chartSelected" int={recruited[3].intelligence} str={recruited[3].strength} spe={recruited[3].speed}
           dur={recruited[3].durability} pow={recruited[3].power} com={recruited[3].combat}
         />
-
-
         <div className="spaceBar"></div>
       </div>
     </div >
@@ -31,7 +29,7 @@ export const Game = ({ recruited }) => {
 
 
 
-// Redirect to /auth/login if user is not present
+
 export default Game;
 
 
